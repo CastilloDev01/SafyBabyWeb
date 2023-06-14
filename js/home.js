@@ -96,7 +96,7 @@ function refreshData() {
                 movement.innerHTML = `Estatus de sensor de movimiento: No hay movimiento`;
             }
             
-            if(data.isSound){
+            if(data.soundLevel > 500){
                 sound.innerHTML = `Sensor de sonido: Hay ruido!`;
             } else {
                 sound.innerHTML = `Sensor de sonido: No hay ruido`;
