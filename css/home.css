@@ -1,0 +1,106 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#settings {
+    width: 50px;
+    height: 99%;
+    position: fixed;
+    background-color: rgb(0, 131, 201);
+}
+
+#content {
+    padding-left: 70px;
+    width: calc(97% - 60px);
+    display: inline-block;
+    vertical-align: top;
+}
+
+#modes button {
+    width: 100%;
+    text-align: left;
+    border: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    cursor: pointer;
+}
+
+.settings {
+    display: inline-block;
+    width: calc(100% - 75px);
+}
+
+.switch-btn {
+    display: -webkit-box;
+    height: 80%;
+    width: 70px;
+    vertical-align: middle;
+}
+
+.switch {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+    top: 2px;
+    left: 3px;
+    animation-duration: 0.15s;
+    animation-fill-mode: both;
+}
+
+@keyframes on {
+    from {
+        left: 2px;
+    }
+    to {
+        left: 30px;
+    }
+}
+
+@keyframes off {
+    from {
+        left: 30px;
+    }
+    to {
+        left: 2px;
+    }
+}
+
+
+.switch-background {
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#sensors span {
+    display: block;
+    padding-bottom: 20px;
+}
+
+#sing-off-field {
+    margin-top: 50px;
+}
+
+#sing-off-field button{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    display: block;
+    width: 200px;
+    height: 60px;
+    border: 0;
+    background-color: rgb(0, 150, 230);
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: auto;
+}

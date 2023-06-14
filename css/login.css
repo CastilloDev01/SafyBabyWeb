@@ -1,0 +1,119 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#main {
+    margin: auto;
+    width: 400px;
+    height: 80%;
+    
+    vertical-align: middle;
+    text-align: center;
+}
+
+.input-field {
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 10px 0 10px 0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 50px;
+}
+
+input:focus {
+    outline: none;
+  }
+
+.input-img {
+    display: inline-block;
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.input-field img {
+    filter: brightness(0) saturate(100%) invert(46%) sepia(23%) saturate(5857%) hue-rotate(174deg) brightness(94%) contrast(102%);    width: 30px;
+}
+
+.input-value {
+    display: inline-block;
+    width: calc(100% - 80px);
+}
+
+.input-field input {
+    display: inline-block;
+    width: 100%;
+    border: 0;
+    height: 65px;
+}
+
+button {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: 0;
+    background-color: rgb(0, 150, 230);
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#error {
+    display: none;
+    padding: 10px 10px 10px 0px;
+    border-radius: 15px;
+    
+    color: #e90000;
+    border: 3px solid #e90000;
+    
+    margin-top: 20px;
+    text-align: justify;
+    align-items: center;
+}
+
+.error-msg {
+    display: inline-block;
+    width: calc(100% - 60px);
+}
+
+.error-img {
+    width: 40px;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;    
+}
+
+.error-img img{
+    filter: invert(9%) sepia(79%) saturate(6695%) hue-rotate(357deg) brightness(112%) contrast(129%);    
+    width: 30px;
+}
+
+#login-loader {
+    display: flex;
+    align-items: center;
+}
+
+#loader {
+    margin-top: 30px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid rgb(0, 150, 230);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s infinite ease-in-out;
+    margin: 0 auto;
+}
+  
+@keyframes spin {
+0% {
+    transform: rotate(0deg); /* posición inicial */
+}
+100% {
+    transform: rotate(360deg); /* posición final */
+}
+}

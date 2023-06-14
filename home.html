@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safy Baby - Home</title>
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script>
+        if (!localStorage.getItem("user-safy-baby")) {
+            window.location.href = "./login.html";
+        }
+    </script>
+</head>
+<body>
+    <div id="settings"> </div>
+
+    <div id="content">
+        <h1>SafyBaby - Home</h1>
+        <p>Bienvenido sea al panel web de SafyBaby</p>
+        
+        <h3>Configuracion del SafyBaby</h3>
+        <div id="modes"> 
+            
+            <button id="mode" class="option">
+                <div class="settings">
+                    <span class="value">Modo Sueño</span>
+                </div>
+
+                <div class="switch-btn">
+                    <div class="switch-background">
+                        <div class="switch"></div>
+                    </div>
+                </div>
+            </button>
+        </div>
+        <hr>
+        
+        <h3>Sensores del SafyBaby Realtime</h3>       
+        
+        <div id="sensors">
+
+            <div>
+                <span id="temperature">
+                    ...
+                </span>
+            </div>
+            
+            <span id="humidity">
+                ...
+            </span>
+            
+            <span id="movement">
+                ...
+            </span>
+
+            <span id="gas-lvl">
+                ...
+            </span>
+
+            <span id="sound">
+                ...
+            </span>
+        </div>
+
+        <div id="sing-off-field">
+            <button id="sing-off">
+                Cerrar Sesion
+            </button>
+        </div>
+    </div>
+    <script src="js/home.js"></script>
+</body>
+</html>

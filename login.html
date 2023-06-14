@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafyBaby Web!</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <script>
+        if (localStorage.getItem("user-safy-baby")) {
+            window.location.href = "./home.html";
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <h1>SafyBaby Web Login</h1>
+        
+        <p>Ingrese su usuario de SafyBaby y su contraseña</p>
+
+        <div class="input-field">
+            <div class="input-img">
+                <img src="img/profile.svg" alt="...">
+            </div>
+            
+            <div class="input-value">
+                <input id="input-user" type="text" value="SB-V1-1" placeholder="Ingresa tu usuario SafyBaby">
+            </div>
+        </div>
+
+        <div class="input-field">
+            <div class="input-img">
+                <img src="img/password.svg" alt="...">
+            </div>
+            
+            <div class="input-value">
+                <input id="input-pwd" type="password" value="AAA1" placeholder="Ingresa tu contraseña">
+            </div>
+        </div>
+        
+        <div id="login-loader">
+            <div id="loader" style="display: none;"></div>
+            <button id="login">Login</button>
+        </div>
+
+        <div id="error" class="error-structure">
+            <div class="error-img">
+                <img src="img/error.svg" alt="...">
+            </div>
+            
+            <div class="error-msg"></div>
+        </div>
+
+    </div>
+
+    <div></div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
