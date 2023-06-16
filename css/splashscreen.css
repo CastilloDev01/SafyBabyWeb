@@ -1,0 +1,73 @@
+#splash-screen {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top:0;
+    color: rgb(2, 218, 114);
+    z-index: 1;
+
+    animation: disappear-all 1s normal ease-in-out;
+    animation-duration: 0.15s;
+    animation-fill-mode: both;
+    animation-delay: 5s;
+}
+
+#splash-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 50%;
+    top: 40%;
+    font-size: 40px;
+    width: 100%;
+    height: 50%;
+}
+
+#powered-by {
+    display: inline-block;
+    font-size: 60px;
+    color: transparent;
+    animation: appear 1s normal ease-in-out;
+    animation-duration: 0.15s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+
+#our-name {
+    display: inline-block;
+    font-size: 40px;
+    color: transparent;
+    animation: appear 1s normal ease-in-out;
+    animation-duration: 0.15s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+  
+@keyframes appear {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: rgb(2, 218, 114);
+    }
+}
+
+@keyframes disappear-all {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+
+    100% {
+        width: 0%;
+        opacity: 0%;
+    }
+}
