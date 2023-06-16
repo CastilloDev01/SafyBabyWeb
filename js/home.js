@@ -89,7 +89,7 @@ function refreshData() {
             temperature.innerHTML = `Temperatura: ${data.temperature} °C`;
             humidity.innerHTML = `Humedad: ${data.humidity}%`;
 
-            if (gasLevel > 30) {
+            if (data.gasLevel > 30) {
                 gasLevel.innerHTML = `Nivel de gas: Hay un gas desconocido! (${data.gasLevel})`;
             } else {
                 gasLevel.innerHTML = `Nivel de gas: Nada grave (${data.gasLevel})`;
