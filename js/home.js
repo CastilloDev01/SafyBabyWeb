@@ -86,17 +86,23 @@ function refreshData() {
             setSwitchsColorsWithStatus();
             
             // Colocar los parámetros de SafyBaby en el portal
-            temperature.innerHTML = `Temperatura: ${data.temperature}`;
-            humidity.innerHTML = `Humedad: ${data.humidity}`;
-            gasLevel.innerHTML = `Nivel de gas: ${data.gasLevel}`;
-            
+            temperature.innerHTML = `Temperatura: ${data.temperature} °C`;
+            humidity.innerHTML = `Humedad: ${data.humidity}%`;
+
+            if (gasLevel > 30) {
+                gasLevel.innerHTML = `Nivel de gas: Hay un gas desconocido! (${data.gasLevel})`;
+            } else {
+                gasLevel.innerHTML = `Nivel de gas: Nada grave (${data.gasLevel})`;
+            }
+
+
             if(data.isMoving){
                 movement.innerHTML = `Estatus de sensor de movimiento: Hay movimiento!`;
             } else {
                 movement.innerHTML = `Estatus de sensor de movimiento: No hay movimiento`;
             }
             
-            if(data.soundLevel > 500){
+            if(data.soundLevel > 25){
                 sound.innerHTML = `Sensor de sonido: Hay ruido!`;
             } else {
                 sound.innerHTML = `Sensor de sonido: No hay ruido`;
